@@ -13,10 +13,9 @@ router.post("/contact" , async (req , res) => {
         if(!name || !email || !phone || !subject || !message){
             return res.status(400).json({message: "all fields are required"});
         }
-
         const mailOptions = {
-        from: `"Website Contact" <${process.env.SMTP_USER}>`,
-        to: process.env.SMTP_USER,
+        from: `"Website Contact" <bhead@shreejienterprises8.in>`,
+        to: "bhead@shreejienterprises8.in",
         replyTo: email, // so you can reply directly to user
         subject: "New Contact Form Submission",
         html: `
